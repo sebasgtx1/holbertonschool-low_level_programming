@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
- * main_2 - prints a messge
+ * main - prints a messge
  *
  * Return: Always 0 (Success)
  */
-int main_2(void)
+int main(void)
 
 {
 
