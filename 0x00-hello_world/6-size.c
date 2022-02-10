@@ -9,7 +9,16 @@ int main(void)
 
 {
 
-printf("with proper grammar, but the outcome is a piece of art,\n");
+int intType;
+long int longType;
+long long int llintType;
+float floatType;
+
+printf("Size of char: %zu bytes\n", sizeof(charType));
+printf("Size of int: %zu bytes\n", sizeof(intType));
+printf("Size of long int: %zu bytes\n", sizeof(longintType);
+printf("Size of long long int: %zu byte\n", sizeof(llintTupe);
+printf("Size of long float: %zu bytes\n", sizeof(floatType);
 
 return (0);
 
