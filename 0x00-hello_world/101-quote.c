@@ -14,6 +14,8 @@ x = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n\n";
 
 fwrite(x, 58, 1, stderr);
 
+\n
+
 return (1);
 
 }
