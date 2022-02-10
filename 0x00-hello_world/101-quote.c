@@ -8,8 +8,11 @@
 int main(void)
 
 {
+char *x;
 
-fwrite("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 58, 1, stderr);
+x = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+fwrite(x, 58, 1, stderr);
 
 return (1);
 
