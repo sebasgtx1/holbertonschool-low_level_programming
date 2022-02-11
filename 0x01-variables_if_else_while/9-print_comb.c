@@ -10,9 +10,15 @@ int main(void)
 {
 int c;
 
-for (c = 0; c < 10; ++c)
+for (c = 48; c < 58; ++c)
 {
-putchar(c + 44);
+putchar(c);
+
+if (c < 58)
+{
+putchar(44);
+putchar(' ');
+}
 }
 putchar('\n');
 return (0);
