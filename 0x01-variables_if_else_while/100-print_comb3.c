@@ -8,20 +8,28 @@
 
 int main(void)
 {
-int c, a;
-
-for (c = 48; c < 58; ++c)
+int i, e;
+i = 48;
+e = 48;
+while (e < 58)
 {
-for (a = 48; a < 58; ++a)
+i = 48;
+while (i < 58)
 {
-putchar(c);
-putchar(a);
-if (c < 58)
+if (e != i && e < i)
 {
+putchar(e);
+putchar(i);
+if (i == 57 && a == 56)
+{
+break;
+}
 putchar(44);
 putchar(' ');
 }
+i++;
 }
+a++;
 }
 putchar('\n');
 return (0);
