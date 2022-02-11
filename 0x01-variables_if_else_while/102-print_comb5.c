@@ -20,8 +20,8 @@ while (a < 58)
 i = 48;
 while (i < 58)
 {
-dd1 = (c) +b;
-dd2 = (a) +i;
+dd1 = (c * 10) + b;
+dd2 = (a * 10) + i;
 if (dd1 < dd2)
 {
 putchar(c);
