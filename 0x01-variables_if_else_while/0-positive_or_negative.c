@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
-
+#include <stdio.h>
 /**
  * main - prints a messge with printf
  *
@@ -15,12 +15,12 @@ n = rand() - RAND_MAX / 2;
 
 if (n < 0)
 {
-printf("%i is negative", n)
+printf("%i is negative\n", n);
 }
 
 else
 {
-printf("%i is positive", n)
+printf("%i is positive\n", n);
 }
 
 return (0);
