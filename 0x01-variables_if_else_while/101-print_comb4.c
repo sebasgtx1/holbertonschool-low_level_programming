@@ -5,29 +5,28 @@
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-int i, b, a;
+int i, a, b;
+
 i = 48;
-b = 48;
 a = 48;
+b = 48;
+
 while (a < 58)
 {
 i = 48;
 while (i < 58)
 {
 b = 48;
-if (a != i && a < i)
-{
 while (b < 58)
 {
-if (i != b && i < b)
+if (a != i && a != b && i != b && a < i && i < b)
 {
 putchar(a);
 putchar(i);
 putchar(b);
-if (i == 56 && b == 57 && a == 55)
+if (i == 56 && a == 55 && b == 57)
 {
 break;
 }
@@ -36,10 +35,9 @@ putchar(' ');
 }
 b++;
 }
-a++;
-}
 i++;
 }
+a++;
 }
 putchar('\n');
 return (0);
