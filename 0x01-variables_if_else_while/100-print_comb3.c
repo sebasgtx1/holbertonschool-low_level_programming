@@ -8,15 +8,15 @@
 
 int main(void)
 {
-int i, e;
+int i, a;
 i = 48;
 e = 48;
-while (e < 58)
+while (a < 58)
 {
 i = 48;
 while (i < 58)
 {
-if (e != i && e < i)
+if (a != i && a < i)
 {
 putchar(e);
 putchar(i);
