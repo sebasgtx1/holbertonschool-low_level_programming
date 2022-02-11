@@ -9,9 +9,6 @@
 int main(void)
 {
 char c;
-char *d;
-
-d = "";
 
 for (c = 'a'; c <= 'z'; ++c)
 {
@@ -21,5 +18,6 @@ c++;
 }
 putchar (c);
 }
+putchar ('\n');
 return (0);
 }
