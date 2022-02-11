@@ -15,7 +15,7 @@ for (c = 48 ; c < 58 ; ++c)
 putchar(c);
 }
 
-for (d = 62 ; d < 67 ; ++d)
+for (d = 97 ; d < 103 ; ++d)
 {
 putchar(d);
 }
