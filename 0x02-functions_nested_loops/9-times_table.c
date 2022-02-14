@@ -5,20 +5,43 @@
  * Return: Always 0 (Success)
  */
 int times_table(void)
+
 {
-int i, a, d;
-i = 48;
-while (i < 58)
+
+int m, a, b;
+
+for (a = 0; a <= 9; a++)
 {
-for (a = 48; a < 58; a++)
+
+for (b = 0; b <= 9; b++)
 {
-d = (a - 48) * (i - 48);
-printf("%i", d);
-printf(",");
-printf(" ");
+m = a * b;
+
+if (b != 9 && m <= 9)
+{
+putchar(m + '0');
+putchar(',');
+putchar(' ');
+}
+if (b != 9 && m >= 9)
+{
+putchar((m / 10) + '0');
+putchar((m % 10) + '0');
+putchar(',');
+putchar(' ');
+}
+if (b == 9 && m <= 9)
+{
+putchar(m + '0');
+}
+if (b == 9 && m > 9)
+{
+putchar((m / 10) + '0');
+putchar((m % 10) + '0');
+}
 }
 putchar('\n');
-i++;
 }
+
 return (0);
 }
