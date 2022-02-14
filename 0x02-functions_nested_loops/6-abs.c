@@ -8,6 +8,14 @@
 */
 int _abs(int a)
 {
-printf("%i", abs(a));
-return (0);
+if (a > 0)
+{
+return (a);
+}
+
+if (a < 0)
+{
+return (a * -1);
+}
+
 }
