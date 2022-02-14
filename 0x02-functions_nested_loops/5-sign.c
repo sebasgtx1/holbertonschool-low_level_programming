@@ -23,5 +23,5 @@ if (n < 0)
 putchar(45);
 return (-1);
 }
-putchar('\n')
+putchar('\n');
 }

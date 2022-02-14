@@ -7,15 +7,12 @@
 int _islower(int c)
 {
 
-int comp;
-comp = islower(c);
-
-if (comp == 0)
+if (c >= 97 && c <= 122)
 {
-return (0);
+return (1);
 }
 else
 {
-return (1);
+return (0);
 }
 }
