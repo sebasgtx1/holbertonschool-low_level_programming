@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <ctype.h>
+#include "main.h"
 /**
  * print_sign -  checks sing of a number
  * @n: is a number
