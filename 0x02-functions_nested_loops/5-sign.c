@@ -2,7 +2,7 @@
 #include <ctype.h>
 #include "main.h"
 /**
- * print_sign -  checks sing of a number
+ * print_sign -  checks sing of a number.
  * @n: is a number
  * Return: 0 if n is zero 1 if n>0 and -1 if n<0
 */
