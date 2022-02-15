@@ -24,7 +24,7 @@ if (a == 54)
 {
 break;
 }
-if (b > 51)
+if (b > 51 && c >= 50)
 {
 break;
 }
