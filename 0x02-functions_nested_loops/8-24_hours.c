@@ -9,7 +9,7 @@ int jack_bauer(void)
 {
 int i, a, b, c;
 i = a = b = c = 48;
-while (c < 52)
+while (c < 50)
 {
 b = 48;
 while (b < 58)
@@ -21,6 +21,10 @@ i = 48;
 while (i < 58)
 {
 if (a == 54)
+{
+break;
+}
+if (b > 51)
 {
 break;
 }
