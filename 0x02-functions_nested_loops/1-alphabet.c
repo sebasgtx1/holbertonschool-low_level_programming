@@ -3,9 +3,9 @@
 /**
  * print_alphabet - prints the alphabet in lowercase
  *
- * Return: Always 0 (Success)
+ * Return: no return
  */
-int print_alphabet(void)
+void print_alphabet(void)
 {
 int c;
 for (c = 97; c <= 122; ++c)
@@ -13,5 +13,4 @@ for (c = 97; c <= 122; ++c)
 putchar(c);
 }
 putchar('\n');
-return (0);
 }
