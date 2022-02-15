@@ -17,7 +17,7 @@ for (b = 0; b <= 9; b++)
 {
 m = a * b;
 
-if (b != 9 && m < 9)
+if (b != 9 && m <= 9)
 {
 putchar(m + '0');
 putchar(',');
