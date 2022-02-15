@@ -23,6 +23,4 @@ else
 putchar(48);
 return (0);
 }
-putchar('\n');
 }
-
