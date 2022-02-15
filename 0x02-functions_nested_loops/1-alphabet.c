@@ -5,9 +5,6 @@
  *
  * Return: no return
  */
-/**
- *Funtion declaration
- */
 
 void print_alphabet(void)
 {
