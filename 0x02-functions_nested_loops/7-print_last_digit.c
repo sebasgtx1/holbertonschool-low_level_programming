@@ -6,10 +6,19 @@
  * @a: is a number
  * Return: 0 (Success)
 */
-int print_last_digit(int a)
+int print_last_digit(int n)
 {
 int ld;
-ld = a % 10;
-putchar (ld + '0');
+
+ld = n % 10;
+if (ld < 0)
+{
+putchar(-ld + 48);
+return (-ld);
+}
+else
+{
+putchar(ld + 48);
 return (ld);
+}
 }
