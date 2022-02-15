@@ -26,7 +26,7 @@ break;
 }
 putchar(c);
 putchar(b);
-putchar(' ');
+putchar(58);
 putchar(a);
 putchar(i);
 putchar('\n');
