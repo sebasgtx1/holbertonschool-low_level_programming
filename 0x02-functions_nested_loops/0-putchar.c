@@ -8,11 +8,11 @@
 
 int main(void)
 {
-
+int i;
 char array [] = {95, 112, 117, 116, 99, 104, 97, 114};
 
 int length = sizeof(array) / sizeof(array[0]);
-for (int i = 0; i < length; i++)
+for (i = 0; i < length; i++)
 {
 putchar(array[i]);
 }
