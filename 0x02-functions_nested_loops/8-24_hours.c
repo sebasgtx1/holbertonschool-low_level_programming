@@ -22,7 +22,7 @@ while (i < 58)
 {
 if (a == 54)
 {
-break
+break;
 }
 putchar(c);
 putchar(b);
