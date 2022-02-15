@@ -13,12 +13,12 @@ int ld;
 ld = n % 10;
 if (ld < 0)
 {
-putchar(-ld + 48);
+_putchar(-ld + 48);
 return (-ld);
 }
 else
 {
-putchar(ld + 48);
+_putchar(ld + 48);
 return (ld);
 }
 }
