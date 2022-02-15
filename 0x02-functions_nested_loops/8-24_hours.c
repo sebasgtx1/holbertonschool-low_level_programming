@@ -20,7 +20,10 @@ while (a < 54)
 i = 48;
 while (i < 58)
 {
-
+if (a = 54)
+{
+break
+}
 putchar(c);
 putchar(b);
 putchar(' ');
