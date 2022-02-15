@@ -1,31 +1,45 @@
-#include <stdio.h>
+#include "stdio.h"
+
 /**
- * times_table - Prints a times table
- * @i: times
- * Return: Always 0 (Success)
+ * print_times_table - Prints the n times table
+ *
+ * @n: number times table (0 < n <= 15)
+ *
+ * Return: nothing
  */
-int times_table(int i)
+void print_times_table(int n)
 {
-int a, d, e;
-
-while (e < i)
+int a, b, m;
+if (n >= 0 && n <= 15)
 {
-for (a = 0; a < i; a++)
+for (a = 0; a <= n; a++)
 {
-if (a == (i - 1))
+putchar(48);
+for (b = 1; b <= n; b++)
 {
-d = a * e;
-printf("%i", d);
-break;
+m = a * b;
+putchar(44);
+putchar(32);
+if (m <= 9)
+{
+putchar(32);
+putchar(32);
+putchar(m + 48);
 }
-d = a * e;
-printf("%i", d);
-printf(",");
-printf(" ");
-
+else if (m <= 99)
+{
+putchar(32);
+putchar((m / 10) + 48);
+putchar((m % 10) + 48);
 }
-e++;
+else
+{
+putchar(((m / 100) % 10) + 48);
+putchar(((m / 10) % 10) + 48);
+putchar((m % 10) + 48);
+}
+}
 putchar('\n');
 }
-return (0);
+}
 }
