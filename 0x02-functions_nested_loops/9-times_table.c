@@ -6,47 +6,27 @@
  */
 int times_table(void)
 {
-int m, a, b;
+int a, b, m;
+
 for (a = 0; a <= 9; a++)
 {
-for (b = 0; b <= 9; b++)
+putchar(48);
+for (b = 1; b <= 9; b++)
 {
 m = a * b;
-if (b != 9 && m <= 9)
+putchar(44);
+putchar(32);
+if (m <= 9)
 {
-if ((m + 1) >= 9)
-{
-putchar(m + '0');
-putchar(',');
-putchar(' ');
+putchar(32);
+putchar(m + 48);
 }
 else
 {
-putchar(m + '0');
-putchar(',');
-putchar(' ');
-putchar(' ');
-}
-}
-if (b != 9 && m > 9)
-{
-putchar((m / 10) + '0');
-putchar((m % 10) + '0');
-putchar(',');
-putchar(' ');
-}
-if (b == 9 && m <= 9)
-{
-putchar(' ');
-putchar(m + '0');
-}
-if (b == 9 && m > 9)
-{
-putchar((m / 10) + '0');
-putchar((m % 10) + '0');
+putchar((m / 10) + 48);
+putchar((m % 10) + 48);
 }
 }
 putchar('\n');
 }
-return (0);
 }
