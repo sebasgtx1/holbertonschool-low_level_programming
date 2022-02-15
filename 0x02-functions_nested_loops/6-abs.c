@@ -13,7 +13,7 @@ if (a > 0)
 return (a);
 }
 
-else (a < 0)
+else
 {
 return (a * -1);
 }
