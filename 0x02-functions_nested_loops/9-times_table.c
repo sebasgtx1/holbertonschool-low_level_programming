@@ -5,29 +5,26 @@
  * Return: Always 0 (Success)
  */
 int times_table(void)
-
 {
-
 int m, a, b;
-
 for (a = 0; a <= 9; a++)
 {
-
 for (b = 0; b <= 9; b++)
 {
 m = a * b;
-
 if (b != 9 && m <= 9)
+{
+if ((m + 1) >= 9)
 {
 putchar(m + '0');
 putchar(',');
 putchar(' ');
-if ((m+1) >= 9)
-{
-break;
 }
 else
 {
+putchar(m + '0');
+putchar(',');
+putchar(' ');
 putchar(' ');
 }
 }
@@ -51,7 +48,5 @@ putchar((m % 10) + '0');
 }
 putchar('\n');
 }
-
 return (0);
 }
-
