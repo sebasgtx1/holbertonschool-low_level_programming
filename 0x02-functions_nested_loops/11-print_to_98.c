@@ -2,26 +2,26 @@
 
 /**
  * print_to_98 - prints number until 98
- * @a: number
+ * @n: number
  * Return: 0 (Succes)
  */
-int print_to_98(int a)
+void print_to_98(int n)
 {
-int i;
+if (n > 98)
+{
+for (; n > 98; n--)
+{
+printf("%i, ", n);
+}
+}
+else if (n < 98)
+{
+for (; n < 98; n++)
+{
+printf("%i, ", n);
+}
+}
+printf("%i\n", n);
+}
 
-if (a > 98)
-{
-for (i = a; i = 98; i--)
-{
-printf("%i, ", i);
-}
-}
-else
-{
-for (i = a; i = 98; i++)
-{
-printf("%i, ", i);
-}
-}
-return (0);
-}
+
