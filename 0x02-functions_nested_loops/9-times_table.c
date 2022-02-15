@@ -33,6 +33,7 @@ putchar(' ');
 }
 if (b == 9 && m <= 9)
 {
+putchar(' ');
 putchar(m + '0');
 }
 if (b == 9 && m > 9)
