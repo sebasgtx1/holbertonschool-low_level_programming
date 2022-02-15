@@ -24,7 +24,7 @@ putchar(',');
 putchar(' ');
 if ((m+1) >= 9)
 {
-break
+break;
 }
 else
 {
@@ -54,3 +54,4 @@ putchar('\n');
 
 return (0);
 }
+
