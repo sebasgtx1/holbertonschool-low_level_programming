@@ -8,23 +8,22 @@
  */
 int main(void)
 {
-	int i;
-	long int n;
+	long int i, n;
+	
+	int a;
 
 	n = 612852475143;
 
-	while (n % 2 == 0)
-	{
-	printf("2 ");
-	}
-	for (i = 3; i <= sqrt(n); i = i + 2)
+
+	for (i = 2; i <= sqrt(n); i++)
 	{
 		while (n % i == 0)
 		{
-		printf("%d ", i);
+		a = i;
 		n = n / i;
 		}
 	}
+printf("%d", a);
 putchar('\n');
 return (0);
 }
