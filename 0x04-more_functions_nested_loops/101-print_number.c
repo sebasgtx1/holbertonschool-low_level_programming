@@ -5,43 +5,31 @@
  * Return: no return
  */
 void print_number(int n)
+
 {
-	int n2, n3;
+int i, d, c;
 
 	if (n < 0)
 	{
-	_putchar('-');
-	_putchar(-n / 10 + 48);
-	_putchar(-n % 10 + 48);
+		_putchar(45);
+		i = n * -1;
 	}
-	if (n == 0)
+	else
 	{
-	_putchar(48);
+		i = n;
 	}
-	if (n > 0 && n <= 10)
+
+	d = i;
+	c = 1;
+
+	while (d >= 10)
 	{
-	_putchar(n / 10 + 48);
-	_putchar(n % 10 + 48);
+		d /= 10;
+		c *= 10;
 	}
-	if (n > 10 && n < 100)
+
+	for (; c > 0; c /= 10)
 	{
-	_putchar(n / 10 + 48);
-	_putchar(n % 10 + 48);
-	}
-	if (n >= 100 && n < 1000)
-	{
-	n2 = n / 10;
-	_putchar(n / 100 + 48);
-	_putchar(n2 % 10 + 48);
-	_putchar(n % 10 + 48);
-	}
-	if (n >= 1000)
-	{
-	n2 = n / 10;
-	n3 = n2 / 10;
-	_putchar(n / 1000 + 48);
-	_putchar(n3 % 10 + 48);
-	_putchar(n2 % 10 + 48);
-	_putchar(n % 10 + 48);
+		_putchar(((i / c) % 10) + 48);
 	}
 }
