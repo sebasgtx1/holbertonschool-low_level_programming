@@ -5,28 +5,32 @@
  */
 void more_numbers(void)
 {
-	int i, a, i2;
+int i, a, i2;
 
 	for (i2 = 0; i2 < 10; i2++)
 	{
 	i = 48;
 	a = 0;
-		for (i = 48; i <= 57; i++)
+		for (i = 48; i <= 58; i++)
 		{
-			a += i;
+			if (a == 775)
+			{
+				break;
+			}
+			if (a >= 525)
+			{
+				_putchar(49);
+			}
 			if (a == 525)
 			{
-			i = 48;
+				i = 48;
 			}
-			else if (a > 525)
-			{
-			_putchar(49);
-			}
-			_putchar(i);
+				_putchar(i);
 			if (a == 727)
 			{
-			break;
+				break;
 			}
+		a += i;
 		}
 	_putchar('\n');
 }
