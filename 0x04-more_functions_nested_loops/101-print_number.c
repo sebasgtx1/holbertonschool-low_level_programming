@@ -22,7 +22,7 @@ int i, d, c;
 	d = i;
 	c = 1;
 
-	while (d >= 10)
+	while (d > 9)
 	{
 		d /= 10;
 		c *= 10;
