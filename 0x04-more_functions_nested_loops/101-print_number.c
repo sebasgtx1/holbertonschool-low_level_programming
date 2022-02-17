@@ -8,7 +8,6 @@ void print_number(int n)
 {
 	int n2, n3;
 
-	
 	if (n < 0)
 	{
 	_putchar('-');
@@ -45,5 +44,4 @@ void print_number(int n)
 	_putchar(n2 % 10 + 48);
 	_putchar(n % 10 + 48);
 	}
-
 }
