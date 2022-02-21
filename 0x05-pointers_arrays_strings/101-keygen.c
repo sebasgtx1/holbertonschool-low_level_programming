@@ -5,7 +5,7 @@
  * main - give a random key
  * Return: no return
  */
-void main(void)
+int main(void)
 {
 	int n;
 
@@ -13,6 +13,6 @@ void main(void)
 	n = rand();
 	
 	printf("%d", n);
-
+return(0);
 	
 }
