@@ -5,7 +5,7 @@
  * main - give a random key
  * Return: no return
  */
-int main(void)
+void main(void)
 {
 	int n;
 
