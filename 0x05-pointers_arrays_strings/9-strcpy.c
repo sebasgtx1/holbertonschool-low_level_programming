@@ -14,7 +14,6 @@ i = 0;
 	while (i >= 0)
 	{
 	*(dest + i) = *(src + i);
-	i++;
 	if  (*(src + i) == '\0')
 	{
 	break;
