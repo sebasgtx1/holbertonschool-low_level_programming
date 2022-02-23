@@ -4,6 +4,7 @@
  * _strncat - concatenates a string with the n bytes of another one
  * @src: string.
  * @dest: string.
+ * @n: number of elements to be concatened in dest
  * Return: dest string.
  */
 char *_strncat(char *dest, char *src, int n)
@@ -29,7 +30,7 @@ int k = 0;
 		break;
 		}
 	*(dest + k) = src[k - i];
-		
+
 	}
 return (dest);
 }
