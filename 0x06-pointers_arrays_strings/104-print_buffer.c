@@ -9,5 +9,10 @@
  */
 void print_buffer(char *b, int size)
 {
+int s;
 
+*b = 0;
+size = 0;
+s = 1;
+*b = size + s;
 }
