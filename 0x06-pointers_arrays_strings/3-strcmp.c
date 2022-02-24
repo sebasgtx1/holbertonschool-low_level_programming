@@ -28,13 +28,10 @@ int k = 0;
 		k = 0;
 	}
 
-	if (i > j)
+	if (i > j || i < j)
 	{
-		k = i - j;
+		k = *(s1 + (i - 1)) - (*(s2 + (j - 1));
 	}
-	if (i < j)
-	{
-		k = i - j;
-	}
+	
 return (k);
 }
