@@ -30,11 +30,11 @@ int k = 0;
 
 	if (i > j)
 	{
-		k = 15;
+		k = i - j;
 	}
 	if (i < j)
 	{
-		k = -15;
+		k = i - j;
 	}
 return (k);
 }
