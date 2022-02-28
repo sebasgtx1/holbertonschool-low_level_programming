@@ -13,23 +13,15 @@
 char *_strpbrk(char *s, char *accept)
 {
 
-	int i, j, bolean;
-
-	bolean = 1;
+	int i, j;
 
 	for (i = 0; *(s + i) != '\0'; i++)
 	{
 		for (j = 0; *(accept + j) != '\0'; j++)
 		{
 			if (*(s + i) == *(accept + j))
-			{
-				bolean = 0;
-				break;
-			}
+				return (s + i);
 		}
-	if (bolean == 0)
-		break;
 	}
-
-	return (s + i);
+	return (NULL);
 }
