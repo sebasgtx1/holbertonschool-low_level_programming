@@ -2,7 +2,7 @@
 #define _holberton_
 #include <stdio.h>
 #include <math.h>
-
+#include <stdlib.h>
 /**
  * struct c - Struct c
  * @re: real part
