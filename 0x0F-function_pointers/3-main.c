@@ -14,20 +14,20 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		exit(1);
+		exit(98);
 	}
 
 	if (argv[2][1])
 	{
 		printf("Error\n");
-		exit(2);
+		exit(99);
 	}
 
 	func = get_op_func(argv[2]);
 	if (func == NULL)
 	{
 		printf("Error\n");
-		exit(3);
+		exit(99);
 	}
 	result = func(atoi(argv[1]), atoi(argv[3]));
 	printf("%d\n", result);
