@@ -8,10 +8,8 @@
 
 double modulus(complex c)
 {
-        double mod;
+	double mod;
 
-        mod = (double) sqrt((pow(c.re, 2) + pow(c.im, 2)));
-
-        return (mod);
-
+	mod = (double) sqrt((pow(c.re, 2) + pow(c.im, 2)));
+	return (mod);
 }
