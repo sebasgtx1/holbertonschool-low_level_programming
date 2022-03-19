@@ -1,16 +1,19 @@
 section .data
-	msg db "Hello, World",10
+	msg db "Hello, World",10 ;our dear string
 
 	section .text
 	global main
 
+; linker puts the entry point here:
 main:
-	mov rax, 1
-	mov rdi, 1
-	mov rsi, msg
-	mov rdx, 13
-	syscall
+; Write the string to stdout:
+	mov rax, 4 ;system call number (sys_write) 
+	mov rdi, 1 ;file descriptor (stdout)
+	mov rsi, msg ;message to write
+	mov rdx, 13 ;message length
+	syscall  ;call kernel
 
-	mov rax, 60
-	mov rdi, 0
-	syscall
+; Exit via the kernel:
+	mov rax, 0 ;process' exit code
+	mov rdi, 0 ;system call number (sys_exit)
+	syscall  ;call kernel - this interrupt won't return
