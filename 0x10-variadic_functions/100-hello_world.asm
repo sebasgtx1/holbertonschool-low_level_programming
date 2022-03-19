@@ -7,7 +7,7 @@ section .data
 ; linker puts the entry point here:
 main:
 ; Write the string to stdout:
-	mov rax, 4 ;system call number (sys_write) 
+	mov rax, 1 ;system call number (sys_write) 
 	mov rdi, 1 ;file descriptor (stdout)
 	mov rsi, msg ;message to write
 	mov rdx, 13 ;message length
