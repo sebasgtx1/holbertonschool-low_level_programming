@@ -21,18 +21,18 @@ list_t *add_node_end(list_t **head, const char *str)
 	for (; str[strlen]; strlen++)
 		;
 
-	new->len = strlen;
-	new->next = NULL;
+	new_h->len = strlen;
+	new_h->next = NULL;
 	temp = *head;
 	if (!temp)
 	{
-		*head = new;
+		*head = new_h;
 	}
 	else
 	{
 		while (temp->next)
 			temp = temp->next;
-		temp->next = new;
+		temp->next = new_h;
 	}
 	return (*head);
 }
