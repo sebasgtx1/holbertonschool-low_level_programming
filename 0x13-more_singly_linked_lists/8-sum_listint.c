@@ -8,15 +8,12 @@
  */
 int sum_listint(listint_t *head)
 {
-	listint_t *value, *temp;
+	int add = 0;
 
-	temp = head;
-	value = temp;
-
-	while (temp->next)
+	while (head)
 	{
-		temp = temp->next;
-		value->n += temp->n;
+		add += head->n;
+		head = head->next;
 	}
-	return (value->n);
+	return (add);
 }
