@@ -1,10 +1,10 @@
 #include "lists.h"
 /**
- * free_listp3 - frees a listint_t list and set the head to NULL
+ * free_listp4 - frees a listint_t list and set the head to NULL
  * @head: pinter to the list to be free it
  * Return: no return
  */
-void free_listp3(list_p **head)
+void free_listp4(list_p **head)
 {
 	list_p *headp;
 
@@ -50,7 +50,7 @@ size_t free_listint_safe(listint_t **h)
 			if (*h == a_c->address)
 			{
 				*h = NULL;
-				free_listp3(&a_u);
+				free_listp4(&a_u);
 				return (nodes);
 			}
 		}
@@ -62,6 +62,6 @@ size_t free_listint_safe(listint_t **h)
 	}
 
 	*h = NULL;
-	free_listp3(&a_u);
+	free_listp4(&a_u);
 	return (nodes);
 }
