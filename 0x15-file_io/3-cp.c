@@ -23,11 +23,9 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 	f_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (f_to == -1)
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	while ((read_val = read(f_from, buff, 1024)) > 0)
 	{
-		if (read_val != write(f_to, buff, read_val))
+		if (f_to == -1 || read_val != write(f_to, buff, read_val))
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
 	if (read_val == -1)
