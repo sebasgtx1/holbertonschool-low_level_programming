@@ -5,26 +5,37 @@
  * @argv: vector of arguments
  * Return: 0
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-char buffer[1024];
-int fd_from, fd_to;
-ssize_t rd_bytes;
+	int f_from, f_to;
+	ssize_t read_val, write_val;
+	char buff[1024];
 
-if (argc != 3)
-	dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
-fd_from = open(argv[1], O_RDONLY);
-if (fd_from == -1)
-	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
-fd_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-while ((rd_bytes = read(fd_from, buffer, 1024)) > 0)
-	if (fd_to == -1 || rd_bytes != write(fd_to, buffer, rd_bytes))
+	if (argc != 3)
+	{
+		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
+		exit(97);
+	}
+	f_from = open(argv[1], O_RDONLY);
+	if (f_from == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+	f_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (f_to == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
-if (rd_bytes == -1)
-	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
-if (close(fd_from) == -1)
-	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_from), exit(100);
-if (close(fd_to) == -1)
-	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_to), exit(100);
-return (0);
+	while ((read_val = read(f_from, buff, 1024)) > 0)
+	{
+		write_val = write(f_to, buff, read_val);
+		if (write_val == -1 || write_val != read_val)
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+	}
+	if (read_val == -1)
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+	if (close(f_form) == -1)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f_from), exit(100);
+	if (close(f_to) == -1)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f_to), exit(100);
+	return (0);
 }
