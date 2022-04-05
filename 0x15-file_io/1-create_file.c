@@ -20,6 +20,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (fd == -1)
 	{
+		close(fd);
 		return (-1);
 	}
 
@@ -32,6 +33,7 @@ int create_file(const char *filename, char *text_content)
 	write_val = write(fd, text_content, i);
 	if (write_val == -1)
 	{
+		close(fd);
 		return (-1);
 	}
 	close(fd);
