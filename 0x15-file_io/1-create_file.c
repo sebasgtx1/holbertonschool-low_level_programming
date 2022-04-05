@@ -11,35 +11,31 @@
 int create_file(const char *filename, char *text_content)
 {
 
-	int fd, i = 0, write_val, read_val;
-	char *buff;
+	int fd, i = 0, write_val;
 
 	if (!filename)
 		return (-1);
 
-	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC);
+	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC);
 
 	if (fd == -1)
-		return (-1);
-
-	if (text_content)
 	{
-		for (; text_content[i]; i++)
-			;
-		buff = malloc(i);
-		write_val = write(fd, text_content, i);
-		if (write_val == -1)
-		{
-			free(buff);
-			return (-1);
-		}
-	}
-
-	read_val = read(fd, buff, i);
-	if (read_val == -1)
-	{
-		free(buff);
+		close(fd);
 		return (-1);
 	}
+
+	if (!text_content)
+		text_content = "";
+
+	for (; text_content[i]; i++)
+		;
+
+	write_val = write(fd, text_content, i);
+	if (write_val == -1)
+	{
+		close(fd);
+		return (-1);
+	}
+	close(fd);
 	return (1);
 }
