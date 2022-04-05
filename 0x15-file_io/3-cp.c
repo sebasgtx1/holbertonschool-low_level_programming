@@ -5,7 +5,7 @@
  * @argv: vector of arguments
  * Return: 0
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 	int f_from, f_to;
 	ssize_t read_val;
@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 		if (f_to == -1 || read_val != write(f_to, buff, read_val))
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	if (read_val == -1)
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]), exit(98);
 	if (close(f_form) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f_from), exit(100);
 	if (close(f_to) == -1)
