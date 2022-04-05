@@ -8,7 +8,7 @@
 int main(int argc, char *argv[])
 {
 	int f_from, f_to;
-	ssize_t read_val, write_val;
+	ssize_t read_val;
 	char buff[1024];
 
 	if (argc != 3)
@@ -27,8 +27,7 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	while ((read_val = read(f_from, buff, 1024)) > 0)
 	{
-		write_val = write(f_to, buff, read_val);
-		if (write_val == -1 || read_val != write_val)
+		if (read_val != write(f_to, buff, read_val))
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
 	if (read_val == -1)
