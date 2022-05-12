@@ -10,9 +10,9 @@
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *newn, *temp;
-	unsigned int index = 0;
+	unsigned int index = 0, size = 0;
 
-	temp = *h
+	temp = *h;
 
 	if (!h || (int)idx < 0)
 	{
