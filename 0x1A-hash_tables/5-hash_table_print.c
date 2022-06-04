@@ -13,7 +13,7 @@ void hash_table_print(const hash_table_t *ht)
 	char *com = "";
 
 	if (ht == NULL)
-		return (NULL);
+		return;
 
 	printf("{");
 	while (i < ht->size)
