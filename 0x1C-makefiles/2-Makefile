@@ -1,0 +1,10 @@
+#variables
+CC = gcc #compiler
+SRC = main.c school.c # .c files
+OBJ =  ${SRC:.c=.o} # .o files
+NAME = school # name of the .exe
+
+#rules
+
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
