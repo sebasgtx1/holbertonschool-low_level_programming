@@ -8,3 +8,7 @@ NAME = school # name of the .exe
 
 all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
+
+%.o: %.c
+	${CC} -c $< -o $@ 
+	
